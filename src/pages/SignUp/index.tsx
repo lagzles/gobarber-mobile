@@ -48,11 +48,6 @@ const SignUp: React.FC = () => {
         // // manda usuario para pagina de Login (SignIn)
         // history.push('/');
 
-        // addToast({
-        //   type: 'success',
-        //   title: 'Cadastrado Realizado!',
-        //   description: 'Logon no GoBarber criado',
-        // });
       } catch (err) {
         if (err instanceof Yup.ValidationError) {
           const errors = getValidationErrors(err);
