@@ -43,7 +43,8 @@ const SignUp: React.FC = () => {
         </ScrollView>
       </KeyboardAvoidingView>
 
-      <BackToSignIn onPress={() => { navigation.navigate('SignIn') }} >
+      {/* <BackToSignIn onPress={() => { navigation.navigate('SignIn') }} > */}
+      <BackToSignIn onPress={() => { navigation.goBack() }} >
         <Icon name="arrow-left" size={20} color="#ff9000" />
         <BackToSignInText>
           Voltar para Login
