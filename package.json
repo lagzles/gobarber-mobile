@@ -32,7 +32,8 @@
     "react-native-safe-area-context": "^1.0.2",
     "react-native-screens": "^2.7.0",
     "react-native-vector-icons": "^6.6.0",
-    "styled-components": "^5.1.0"
+    "styled-components": "^5.1.0",
+    "yup": "^0.29.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
@@ -40,6 +41,7 @@
     "@react-native-community/eslint-config": "^1.1.0",
     "@types/react-native-vector-icons": "^6.4.5",
     "@types/styled-components": "^5.1.0",
+    "@types/yup": "^0.29.0",
     "babel-jest": "^26.0.1",
     "eslint": "^7.0.0",
     "eslint-config-prettier": "^6.11.0",
