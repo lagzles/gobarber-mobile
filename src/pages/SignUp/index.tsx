@@ -6,6 +6,7 @@ import { Form } from '@unform/mobile'
 import { FormHandles } from '@unform/core'
 import * as Yup from 'yup';
 import getValidationErrors from '../../utils/getValidationErrors';
+import api from '../../services/api';
 
 import Input from '../../components/Input';
 import Button from '../../components/Button';
@@ -37,16 +38,23 @@ const SignUp: React.FC = () => {
           email: Yup.string().required('E-mail Obrigatório').email(),
           password: Yup.string().min(6, 'Mínimo 6 caracteres'),
         });
+        console.log(data);
 
         await schema.validate(data, {
           abortEarly: false,
         });
 
         // manda dados para o api, para cadastrar usuario
-        // await api.post('/users', data);
+        const stuff = await api.post('/users', data);
 
+        console.log(stuff)
+        Alert.alert(
+          'Caddasro realizado',
+          'Agora você ja pode fazer login'
+        )
         // // manda usuario para pagina de Login (SignIn)
         // history.push('/');
+        navigation.goBack();
 
       } catch (err) {
         if (err instanceof Yup.ValidationError) {
